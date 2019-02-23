@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Teams from './Teams';
 import Players from './Players';
@@ -10,9 +10,19 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/teams" component={Teams} />
-          <Route exact path="/players" component={Players} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/teams" component={Teams} />
+            <Route exact path="/players" component={Players} />
+            <Route
+              render={() => (
+                <img
+                  src="https://media.giphy.com/media/NTXqH1bUCfHBS/giphy.gif"
+                  className="Page404"
+                />
+              )}
+            />
+          </Switch>
         </div>
       </Router>
     );
