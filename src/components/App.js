@@ -12,8 +12,8 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/teams" component={Teams} />
-            <Route exact path="/players" component={Players} />
+            <Route path="/teams" component={Teams} />
+            <Route path="/players" component={Players} />
             <Route
               render={() => (
                 <img
