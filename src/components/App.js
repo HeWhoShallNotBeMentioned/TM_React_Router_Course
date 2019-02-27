@@ -4,6 +4,7 @@ import Home from './Home';
 import Teams from './Teams';
 import Players from './Players';
 import Navbar from './Nav';
+import TeamPage from './TeamPage';
 class App extends Component {
   render() {
     return (
@@ -12,8 +13,9 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/teams" component={Teams} />
             <Route path="/players" component={Players} />
+            <Route path="/teams" component={Teams} />
+            <Route path="/:teamId" exact component={TeamPage} />
             <Route
               render={() => (
                 <img
