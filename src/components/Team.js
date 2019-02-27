@@ -23,7 +23,7 @@ export default class Team extends Component {
     getTeam(id).then(team => this.setState(() => ({ team })));
   };
   render() {
-    console.log('team++++++++++++++++++++  ', this.state.team);
+    //console.log('team++++++++++++++++++++  ', this.state.team);
     return this.props.children(this.state.team);
   }
 }
