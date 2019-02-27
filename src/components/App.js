@@ -5,6 +5,7 @@ import Teams from './Teams';
 import Players from './Players';
 import Navbar from './Nav';
 import TeamPage from './TeamPage';
+import Articles from './Articles';
 class App extends Component {
   render() {
     return (
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path="/players" component={Players} />
             <Route path="/teams" component={Teams} />
             <Route path="/:teamId" exact component={TeamPage} />
+            <Route path="/:teamId/articles" component={Articles} />
             <Route
               render={() => (
                 <img
